@@ -1,0 +1,59 @@
+[user]
+	name = kvoon
+	email = kvoon@duck.com
+
+[core]
+	autocrlf = false
+	compression = 9
+	whitespace = error
+	preloadindex = true
+
+[http "https://github.com"]
+	proxy = http://127.0.0.1:7890
+
+[hub]
+	protocol = ssh
+
+[init]
+	defaultBranch = main
+
+[push]
+	default = current
+	autoSetupRemote = true
+	followTags = true
+
+[pull]
+	default = current
+	rebase = true
+
+[rebase]
+	autoStash = true
+	missingCommitsCheck = warn
+
+[log]
+	abbrevCommit = true  # short commits
+	graphColors = blue,yellow,cyan,magenta,green,red
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = -taggerdate
+
+[credential "https://gitee.com"]
+	provider = generic
+
+# URL shortcuts
+[url "https://github.com/"]
+	insteadOf = "gh:"
+
+[url "https://github.com/antfu"]
+	insteadOf = "antfu:"
+
+[url "https://github.com/kvoon3/"]
+	insteadOf = "kvoon:"
+
+[status]
+	branch = true
+	showStash = true
+	showUntrackedFiles = all
